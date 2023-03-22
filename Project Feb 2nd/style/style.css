@@ -1,73 +1,63 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f5ed;
-  }
-  nav {
-    padding: 20px 10%;
-    height: 15vh;
-  }
-  nav ul {
+    font-family: 'Rajdhani', sans-serif;
+}
+nav{
+    padding: 1% 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+nav div{
+    align-self: center;
+}
+nav ul{
     display: flex;
     align-items: center;
-  }
-  
-  nav ul li {
+    justify-content: space-between;
+    gap:50px;
     list-style: none;
-    margin-right: 5%;
-    font-weight: 600;
-  }
-  
-  nav ul li img {
-    width: 100px;
-  }
-  
-  main {
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+content{
     display: flex;
+    /* background-color: aquamarine; */
     align-items: center;
-    justify-content: center;
-  }
-  
-  .leftmain {
-    width: 40%;
-  }
-  
-  .leftmain h1 {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 85%;
+    /* gap: 40px; */
+}
+content h1{
     font-size: 60px;
-  }
-  
-  .leftmain p {
-    margin: 5% 0;
-  }
-  
-  .leftmain button {
-    padding: 15px 20px;
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    border: none;
+}
+content button{
     background-color: #3b855b;
-    border-radius: 10px;
-  }
-  
-  .rightmain {
-    /* width: 60%; */
-    padding: 7%;
-  }
-  
-  .rightmain div img {
-    width: 30%;
-  }
-  
-  .rightmain div img:first-child {
-    margin-right: 20px;
-  }
-  
-  .rightmain div {
-    margin-bottom: 20px;
-  }
-  
-  .rightmain > img {
-    width: 64%;
-  }
+    padding: 3% 3%;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    border:none ;
+    border-radius: 10%;
+}
+content button:hover{
+    background-color: white;
+    color: #3b855b;
+    border: 1px solid #3b855b;
+    border-radius: 10%;
+}
+content .right{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap:30px;
+    /* padding: 7%; */
+}
+content .right .up{
+    display: flex;
+    gap:30px;
+}
