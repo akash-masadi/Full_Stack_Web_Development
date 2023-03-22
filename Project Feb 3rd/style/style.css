@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Red+Rose:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/assets/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Dela Gothic One', cursive;
+    color: #ffc233;
+  }
+
+nav{
+    margin:2%;
+    display: flex;
+    height: 30px;
+    /* width: 100%; */
+    justify-content: space-between;
+    font-family: 'Red Rose', cursive;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-self: center;
+    gap:30px;
+}
+nav button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    padding:5px 25px;
+    font-size: 10px;
+    font-family: 'Red Rose', cursive;
+}
+
+/* main */
+main .main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    width: 100vw;
+    background-size: cover;
+    gap:50px;
+}
+main h1{
+    width: 45%;
+    font-size: 50px;
+    text-align: center;
+}
+main button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-family: 'Red Rose', cursive;
+}
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
