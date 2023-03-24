@@ -48,12 +48,23 @@ button:hover{
 }
 /* Main */
 
-.hero {
+section {
     background-image: url("./assets/bg.png");
     background-size: cover;
     background-attachment: fixed;
     height: 91.5vh;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .hero{
+    grid-row: 1;
+    grid-column: 1;
+    grid-row-end: 2;
+    grid-column-end: 9;
+    /* justify-self:center ; */
+    /* align-self: center; */
   }
   
   .hero-heading {
