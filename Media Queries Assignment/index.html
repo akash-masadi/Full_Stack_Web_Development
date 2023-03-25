@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+      *{
+      font-family: 'Poppins', sans-serif;
+      color: #000000;
+      text-align:center ;
+      }
+      body{
+        display: flex;
+        flex-flow: column wrap;
+        background-color:greenyellow;
+      }
+      h1{
+        align-self: center;
+        font-size: 3rem;
+        margin: 0% 0%;
+        padding: 0% 0%;
+      }
+      p{
+        align-self: center;
+      }
+      .ms{
+          display: none;
+        }
+        .ts{
+            display: none;
+          }
+      .ns{
+          display: none;
+        }
+      .ls{
+          display: none;
+        }
+      @media(max-width: 426px){
+        body{
+          background-color: red;
+        }
+        .ms{
+          display: block;
+        }
+      }
+      @media (426px< width <=768px){
+        body{
+          background-color:aqua;
+        }
+        .ts{
+          display: block;
+        }
+      }
+      @media (768px< width <=1024px){
+        body{
+          background-color:brown;
+        }
+        .ns{
+          display: block;
+        }
+      }
+      @media (1024px< width <=1440px){
+        body{
+          background-color: green;
+        }
+        .ls{
+          display: block;
+        }
+      }
+    </style>
+</head>
+<body>
+    <h1>This is a Media Query Demo page</h1>
+    <p class="ls">Screen Size:1440px</p>
+    <p class="ns">Screen Size:1024px</p>
+    <p class="ts">Screen Size:768px</p>
+    <p class="ms">Screen Size:425px</p>
+</body>
+</html>
