@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inc & Dec</title>
+    <style>
+      * {
+        margin: 5px 5px;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #808080;
+      }
+      .container {
+        background-color: white;
+        width: 40%;
+        height: 40%;
+        border: 3px solid black;
+        border-radius: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .l1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: space-between;
+      }
+      p {
+        font-size: 25px;
+        text-align: center;
+        border: 3px solid black;
+        padding: 3%;
+      }
+      button {
+        width: 30%;
+        font-size: 20px;
+        border: 3px solid black;
+        border-radius: 5px 5px;
+        background-color: #808080;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Counter App</h1>
+      <div class="l1">
+        <button id="bt1">Increment by 1</button>
+        <p id="box">0</p>
+        <button id="bt2">Decrement by 1</button>
+      </div>
+      <button id="reset" style="background-color: #e2fdce">Reset Value</button>
+    </div>
+
+    <script>
+      let btn = document.getElementById("box");
+      const btn1 = document.getElementById("bt1");
+      const btn2 = document.getElementById("bt2");
+      let count = 0;
+      bt1.addEventListener("click", () => {
+        count++;
+        btn.innerHTML = count;
+      });
+      bt2.addEventListener("click", () => {
+        count--;
+        btn.innerHTML = count;
+      });
+      let reset = document.getElementById("reset");
+      reset.addEventListener("click", () => {
+        count = 0;
+        btn.innerHTML = count;
+      });
+    </script>
+  </body>
+</html>
