@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 10px;
+        /* font-size: larger; */
+      }
+      body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #inp {
+        width: 300px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: large;
+      }
+      form {
+        display: flex;
+        /* flex-direction: column; */
+        width: 100%;
+        align-items: space-between;
+        justify-content: center;
+      }
+      ul {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        overflow: auto;
+        list-style-type: none;
+      }
+      #add {
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: large;
+      }
+      #add:hover {
+        background-color: black;
+        color: white;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-self: center;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        width: 40vh;
+      }
+      label {
+        font-size: larger;
+      }
+    </style>
+    <title>ToDo</title>
+  </head>
+  <body>
+    <h1>ToDo List</h1>
+    <form action="#">
+      <input type="text" id="inp" />
+      <input type="submit" value="Add" id="add" onclick="myfunc()" />
+    </form>
+    <div id="list"></div>
+    <script>
+      let inp = document.getElementById("inp");
+      let add = document.getElementById("add");
+      let list = document.getElementById("list");
+      let ul = document.createElement("ul");
+      function myfunc() {
+        let li = document.createElement("li");
+        let x = myfunc1();
+        // console.log(x);
+        x.childNodes[1].innerHTML = inp.value;
+        li.innerHTML = x.innerHTML;
+        ul.appendChild(li);
+        list.appendChild(ul);
+        inp.value = "";
+      }
+      function myfunc1() {
+        let ch = document.createElement("input");
+        ch.setAttribute("type", "checkbox");
+        ch.setAttribute("onclick", "myfunc2(this)");
+        let la = document.createElement("label");
+        let div = document.createElement("div");
+        div.appendChild(ch);
+        div.appendChild(la);
+        return div;
+      }
+      function myfunc2(e) {
+        if (e.checked) {
+          e.parentNode.childNodes[1].style.textDecoration = "line-through";
+        } else {
+          e.parentNode.childNodes[1].style.textDecoration = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
