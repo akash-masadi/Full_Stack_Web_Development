@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+      }
+      li {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter the names</h1>
+    <ol></ol>
+    <form action="#" method="get">
+      <input type="text" name="text" />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      const ol = document.querySelector("ol");
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const input = document.querySelector("input[name=text]");
+        let x = input.value;
+        x = x[0].toUpperCase() + x.slice(1);
+        let y = document.createElement("li");
+        y.innerHTML = x;
+        ol.appendChild(y);
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
