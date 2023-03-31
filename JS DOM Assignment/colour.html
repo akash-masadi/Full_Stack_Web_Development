@@ -88,6 +88,7 @@
     </div>
     <script>
       const form = document.querySelector("form");
+      const body = document.querySelector("body");
       const p = document.querySelector(".prompt");
       const t1 = document.querySelector("#t1");
       const t2 = document.querySelector("#t2");
@@ -108,12 +109,12 @@
             p.innerHTML = "Green";
             break;
           default:
-            p.innerHTML = "Invalid Colour";
+            body.innerHTML = "Invalid Colour";
         }
         if (p.innerHTML === "Invalid Colour") {
-          p.style.backgroundColor = "white";
+          body.style.backgroundColor = "white";
         } else {
-          p.style.backgroundColor = p.innerHTML;
+          body.style.backgroundColor = p.innerHTML;
         }
         t1.value = "";
         t2.value = "";
