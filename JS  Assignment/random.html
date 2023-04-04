@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number</title>
+    <style>
+      body {
+        color: #808080;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #b4d4f0;
+      }
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      div {
+        display: flex;
+        width: 30em;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-size: 30px;
+        padding: 1% 3%;
+        border-radius: 15%;
+      }
+      p[id="answer"] {
+        color: black;
+        font-size: 30px;
+        padding: 1% 3%;
+        background-color: #00bfff;
+        border-radius: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Number</h1>
+    <div>
+      <h2>Time Remaining :</h2>
+      <p id="y">3</p>
+    </div>
+    <p id="answer">0</p>
+    <script>
+      const y = document.querySelector("p[id=y]");
+      const ans = document.querySelector("p[id=answer]");
+      setInterval(() => {
+        let x = Math.floor(Math.random() * 100);
+        ans.innerHTML = x;
+        console.log(y.innerHTML);
+      }, 3000);
+      setInterval(() => {
+        let p = y.innerHTML;
+        y.innerHTML = p - 1;
+        if (y.innerHTML == 0) {
+          y.innerHTML = 3;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

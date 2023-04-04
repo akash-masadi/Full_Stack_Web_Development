@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Validator</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #9cc9f1;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 15px;
+        font-size: 1.5rem;
+      }
+      input[type="submit"]:hover {
+        background-color: #00bfff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      p {
+        /* border: 3px solid black; */
+        font-size: 30px;
+        padding: 1% 3%;
+        border-radius: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter the LinkedIn URL</h1>
+    <form action="#" method="get">
+      <input type="text" name="text" />
+      <input type="submit" value="Submit" onclick="f()" />
+    </form>
+    <p id="y"></p>
+    <script>
+      const form = document.querySelector("form");
+      const y = document.querySelector("p");
+      const input = document.querySelector("input[name=text]");
+      function f() {
+        if (input.value != "") {
+          let x = input.value;
+          let pattern =
+            /(http|https)\:\/\/(www)\.(linkedin)(\.){1}(com)\/(in)\/[a-z A-z 0-9 -]*\//gi;
+          console.log(pattern.test(x));
+          if (x.match(pattern)) {
+            y.innerHTML = "Valid URL";
+          } else {
+            y.innerHTML = "Invalid URL";
+          }
+          y.style.border = "3px solid black";
+          document.body.appendChild(y);
+          input.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
