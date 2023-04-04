@@ -62,7 +62,7 @@
       }
       button {
         margin: 0.5rem;
-        padding: 0.5rem;
+        padding: 10px 15px;
         font-size: 1.5rem;
         background-color: aqua;
       }
@@ -71,6 +71,7 @@
   <body>
     <div class="main">
       <h1>Enter the Colours</h1>
+
       <p>
         Options:" <span style="color: red"> Red </span>
         <span style="color: blue"> Blue </span>
@@ -95,21 +96,21 @@
       function myfunction() {
         const input1 = t1.value;
         const input2 = t2.value;
-        switch (input1 + input2) {
-          case "RedBlue":
-          case "BlueRed":
+        switch ((input1 + input2).toUpperCase()) {
+          case "REDBLUE":
+          case "BLUERED":
             p.innerHTML = "Purple";
             break;
-          case "RedYellow":
-          case "YellowRed":
+          case "REDYELLOW":
+          case "YELLOWRED":
             p.innerHTML = "Orange";
             break;
-          case "BlueYellow":
-          case "YellowBlue":
+          case "BLUEYELLOW":
+          case "YELLOWBLUE":
             p.innerHTML = "Green";
             break;
           default:
-            body.innerHTML = "Invalid Colour";
+            p.innerHTML = "Invalid Colour";
         }
         if (p.innerHTML === "Invalid Colour") {
           body.style.backgroundColor = "white";
