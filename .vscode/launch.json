@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Full_Stack_Web_Development_c078dea8"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
